@@ -1,0 +1,50 @@
+{
+  "name": "maxpfrontend-1",
+  "version": "0.1.0",
+  "author": "Artem Slepets - https://www.linkedin.com/in/artemslepets/",
+  "private": true,
+  "dependencies": {
+    "material-ui": "^1.0.0-beta.37",
+    "material-ui-icons": "^1.0.0-beta.36",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "styled-components": "^3.2.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom --forceExit",
+    "test:coverage": "react-scripts test --env=jsdom --coverage",
+    "eject": "react-scripts eject",
+    "eslint": "eslint 'src/**/*.js'"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slepets-a/react-template"
+  },
+  "bugs": {
+    "url": "https://github.com/slepets-a/react-template/issues"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js}",
+      "!src/index.js",
+      "!src/registerServiceWorker.js",
+      "!src/setupTests.js"
+    ]
+  }
+}
