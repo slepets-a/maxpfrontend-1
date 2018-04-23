@@ -3,3 +3,20 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+label {
+  display: inline-block;
+  width: 100%;
+}
+
+input {
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 75rem;
+  padding: 0 1rem;
+}

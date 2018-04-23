@@ -1,0 +1,16 @@
+.article {
+  box-shadow: 0 0 .2rem rgba(0,0,0,.75);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.article__title {
+  margin: 0 0 1rem;
+  text-align: right;
+}
+
+.article__text {
+  line-height: 1.4;
+  margin: 0;
+  text-align: left;
+}

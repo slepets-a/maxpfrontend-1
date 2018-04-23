@@ -1,0 +1,32 @@
+.login {
+  margin: 0 auto;
+  max-width: 20rem;
+  padding: 2rem;
+}
+
+.login__title {
+  font-weight: normal;
+  margin: 0 0 2rem;
+}
+
+.login__input {
+  bottom: 0;
+  border-radius: .25rem;
+  box-shadow: 0 0 1px black;
+  margin-bottom: 1rem;
+  padding: .25rem;
+}
+
+.login__message {
+  color: rgba(255,0,0,.5);
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.login__button {
+  cursor: pointer;
+  margin: 0 auto;
+  max-width: 10rem;
+  padding: .5rem;
+  width: 100%;
+}

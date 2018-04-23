@@ -1,0 +1,12 @@
+.profile {
+  padding: 2rem 1rem;
+}
+
+.profile__alert {
+  background-color: darkred;
+  border-radius: .25rem;
+  color: white;
+  margin: 0 auto;
+  max-width: 20rem;
+  padding: 3rem 1rem;
+}
