@@ -1,6 +1,6 @@
 import reducer from './reducer';
 
-describe('reducer', () => {
+describe('auth', () => {
   it('should return initial state', () => {
     expect(reducer(undefined, {})).toEqual([]);
   });

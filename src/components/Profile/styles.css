@@ -1,5 +1,5 @@
 .profile {
-  padding: 2rem 1rem;
+  padding: 1rem;
 }
 
 .profile__alert {
@@ -9,4 +9,27 @@
   margin: 0 auto;
   max-width: 20rem;
   padding: 3rem 1rem;
+  text-align: center;
+}
+
+.profile__button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: rgba(0,0,0,.1);
+  cursor: pointer;
+  padding: 1rem 2rem;
+  transition: border-color .25s ease-in-out,
+    color .25s ease-in-out;
+  margin: 2rem 0 1rem;
+}
+
+.profile__button:hover {
+  border: 1px solid black;
+  color: black;
+}
+
+/* should be in shared file */
+.text-align--right {
+  text-align: right;
 }

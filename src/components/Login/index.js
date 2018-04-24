@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import './styles.css';
 
 class Login extends React.Component {
@@ -11,7 +12,7 @@ class Login extends React.Component {
     };
   }
 
-  onInputChange = event => {
+  onInputChange = (event) => {
     const {
       name,
       value,
@@ -21,14 +22,14 @@ class Login extends React.Component {
       [name]: value,
     });
   };
-  auth = event => {
+  auth = (event) => {
     const {
       username,
       password,
     } = this.state;
     event.preventDefault();
     if (username === 'Admin' && password === '12345') {
-      console.log('Successfully signed in');
+      this.props.login();
     } else {
       this.setState({
         ...this.state,
@@ -80,4 +81,10 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+const mapDispatchToProps = dispatch => ({
+  login: () => {
+    dispatch({ type: 'LOGIN_SUCCESS' });
+  },
+});
+
+export default connect(null, mapDispatchToProps)(Login);

@@ -1,8 +1,11 @@
 import { createStore, combineReducers } from 'redux';
-import reducer from '../reducers/reducer';
+import auth from '../reducers/auth';
 
-const configureStore = () => createStore(combineReducers({
-  reducer,
-}));
+const configureStore = () => createStore(
+  combineReducers({
+    auth,
+  }),
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
 
 export default configureStore;
