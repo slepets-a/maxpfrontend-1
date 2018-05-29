@@ -1,19 +1,30 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './styles.css';
+import routes from '../../routes';
+import Authorization from '../Authorization';
 import Header from '../Header';
-import Home from '../Home';
-import News from '../News';
-import Login from '../Login';
-import Secured from '../Secured';
+
+export const renderSwitch = () => (
+  <Switch>
+    {routes.map((route) => {
+      const component = route.isPrivate ? Authorization(route.component) : route.component;
+      return (
+        <Route
+          key={route.path}
+          exact={route.isExact}
+          path={route.path}
+          component={component}
+        />
+      );
+    })}
+  </Switch>
+);
 
 const App = () => (
   <div className="App">
     <Header />
-    <Route exact path="/" component={Home} />
-    <Route exact path="/news" component={News} />
-    <Route exact path="/login" component={Login} />
-    <Route exact path="/profile" component={Secured} />
+    {renderSwitch()}
   </div>
 );
 

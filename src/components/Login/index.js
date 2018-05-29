@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './styles.css';
 
@@ -22,11 +23,13 @@ class Login extends React.Component {
       [name]: value,
     });
   };
+
   auth = (event) => {
     const {
       username,
       password,
     } = this.state;
+
     event.preventDefault();
     if (username === 'Admin' && password === '12345') {
       this.props.login();
@@ -40,10 +43,21 @@ class Login extends React.Component {
 
   render() {
     const {
+      isLoggedIn,
+      location,
+    } = this.props;
+
+    if (isLoggedIn) {
+      const pathname = location.state.from.pathname || '/';
+      return <Redirect to={pathname} />;
+    }
+
+    const {
       username,
       password,
       message,
     } = this.state;
+
     return (
       <form className="login">
         <h1 className="login__title">Log In</h1>
@@ -81,10 +95,14 @@ class Login extends React.Component {
   }
 }
 
+const mapStateToProps = ({ auth: { isLoggedIn } }) => ({
+  isLoggedIn,
+});
+
 const mapDispatchToProps = dispatch => ({
   login: () => {
     dispatch({ type: 'LOGIN_SUCCESS' });
   },
 });
 
-export default connect(null, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

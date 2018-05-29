@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './styles.css';
 
-const Profile = () => (
+const Profile = ({ logout }) => (
   <div className="container text-align--right">
-    <button className="profile__button" onClick={this.props.logout}>
+    <button className="profile__button" onClick={logout}>
       Logout
     </button>
     <div className="profile">
